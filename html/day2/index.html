@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day 2</title>
+  </head>
+  <body>
+    <!-- h, p, pre, multimedia-> img, audio, video, iframe, map, website,  -->
+    <!-- list-> ol, ul  -->
+    <!-- table -->
+    <!-- forms -->
+    <!-- p-> b, i, del,   -->
+    <!-- article, div , section -->
+    <!-- hr , br -->
+    <!-- 2 types of list in html -->
+    <!-- ol -> order list -->
+    <!-- a  -->
+    <ol>
+      <li>ram</li>
+      <li>sita</li>
+      <li>laxman</li>
+      <li>hari</li>
+    </ol>
+    <!-- ul -> unorder list  -->
+    <ul>
+      <li>ram</li>
+      <li>sita</li>
+      <li>laxman</li>
+      <li>hari</li>
+    </ul>
+    <!-- table  -->
+    <table border="1">
+      <tr>
+        <th>name</th>
+        <th>age</th>
+        <th>student</th>
+      </tr>
+      <tr>
+        <td>ram</td>
+        <td>28</td>
+        <td>true</td>
+      </tr>
+      <tr>
+        <td>sita</td>
+        <td>22</td>
+        <td>true</td>
+      </tr>
+      <tr>
+        <td>laxman</td>
+        <td>33</td>
+        <td>false</td>
+      </tr>
+      <tr>
+        <td>Hari</td>
+        <td>19</td>
+        <td>true</td>
+      </tr>
+    </table>
+    <!-- div, section, article -->
+    <!-- block level and inline element -->
+    <h1 style="background-color: blue">HEllo</h1>
+    <img
+      src="./assets/img1.jpg"
+      alt="a image"
+      style="background-color: aqua; width: 350px"
+    />
+    <div style="background-color: brown">
+      <p>hello</p>
+    </div>
+    <section style="background-color: brown">
+      <p>hello from section 1</p>
+    </section>
+    <article>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis veniam
+      voluptatem minima dolorum qui totam pariatur quis, possimus eum quia
+      voluptatibus cupiditate ipsum. Rem laborum voluptate, quibusdam veniam
+      aperiam laudantium.
+    </article>
+    <!-- hr , br   -->
+    <p>
+      Lorem ipsum <br />
+      dolor sit amet consectetur adipisicing elit. Natus quas assumenda, aut
+      deserunt ratione laborum.
+    </p>
+    
+    <hr />
+    <hr />
+    <!-- forms -->
+    <!-- POST, Get, Patch, put, delete -->
+    <form method="" action="" enctype="">
+      <!-- input type-> text, email, password, number, radio, checkbox, file  -->
+      <label for="username">username</label>
+      <input
+        type="text"
+        name="username"
+        placeholder="Enter your username"
+        required
+      />
+      <label for="email">email</label>
+      <input type="email" name="email" placeholder="Enter email address" />
+      <label for="password">Password</label>
+      <input type="password" name="password" placeholder="******" />
+      <label for="phonenumber">Phone Number</label>
+      <input type="number" name="phone" placeholder="9876521" />
+      <label for="photo">User Photo</label>
+      <input type="file" name="photo" />
+      <!-- checkbox  -->
+      <input type="checkbox" name="always login" />
+      <label for="checkbox">Checkbox</label>
+      <!-- radio  -->
+      <input type="radio" name="always login" />
+      <label for="radio">radio</label>
+      <!-- combo box  -->
+      <label for="gender">Your Gender</label>
+      <select name="" id="">
+        <option value="">Select any gender</option>
+        <option value="1">male</option>
+        <option value="2">female</option>
+        <option value="3">other</option>
+      </select>
+      <!-- input / textarea -->
+      <textarea
+        name="desc"
+        id=""
+        placeholder="about yourself"
+        cols="40"
+      ></textarea>
+      <!-- submit -->
+      <button type="submit">Submit now</button>
+    </form>
+    <!-- a -->
+    <a href="main.html" target="_blank">go to main.html</a>
+    <a href="https://google.com"> google </a>
+    <p>
+      <span>ipsum</span> dolor, <b>sit</b> amet
+      <strong>consectetur</strong> adipisicing elit. Dolorum et incidunt rem
+      veritatis quo <i>non</i> harum, alias aspernatur, inventore sapiente
+      blanditiis asperiores quas dolor aut repudiandae in sunt!
+      <del>Error</del> , a?
+    </p>
+  </body>
+</html>
