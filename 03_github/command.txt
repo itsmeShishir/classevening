@@ -1,0 +1,12 @@
+# basic git hub push 
+-> git init -> which file 
+-> git add .
+-> git commit -m "your mnessage"
+-> git branch -m main
+-> git remote add origin location
+-> git push -u origin main
+
+-> git push
+
+
+
