@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <div
+      class="flex w-[50vw] mx-auto gap-10 items-center h-[200px] justify-between"
+    >
+      <img
+        src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        alt=""
+        class="w-[100px] h-[100px] object-cover"
+      />
+      <div>
+        <h1>Product Name : Womens seaters</h1>
+        <p>Price : 1000</p>
+      </div>
+      <div>
+        <button class="bg-black text-white py-2 px-4" id="increment">+</button>
+        <button class="bg-black text-white py-2 px-4" id="value">0</button>
+        <button class="bg-black text-white py-2 px-4" id="decrement">-</button>
+      </div>
+    </div>
+    <div
+      class="flex w-[50vw] mx-auto gap-10 items-center h-[200px] justify-between"
+    >
+      <img
+        src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        alt=""
+        class="w-[100px] h-[100px] object-cover"
+      />
+      <div>
+        <h1>Product Name : Womens seaters</h1>
+        <p>Price : 1000</p>
+      </div>
+      <div>
+        <button class="bg-black text-white py-2 px-4" id="increment">+</button>
+        <button class="bg-black text-white py-2 px-4" id="value">0</button>
+        <button class="bg-black text-white py-2 px-4" id="decrement">-</button>
+      </div>
+    </div>
+    <div
+      class="flex w-[50vw] mx-auto gap-10 items-center h-[200px] justify-end"
+    >
+      <a href="#" class="bg-black text-white py-2 px-4 block">Order </a>
+    </div>
+    <script>
+      let values = 0;
+      const increment = document.getElementById("increment");
+      const decrement = document.getElementById("decrement");
+      const value = document.getElementById("value");
+
+      increment.addEventListener("click", () => {
+        if (values < 10) {
+          values++;
+          value.textContent = values;
+        } else {
+          alert("maxmum value is 9");
+        }
+      });
+
+      decrement.addEventListener("click", () => {
+        if (values > 1) {
+          values--;
+          value.textContent = values;
+        } else {
+          alert("minimum value is 1");
+        }
+      });
+    </script>
+  </body>
+</html>
