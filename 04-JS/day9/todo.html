@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body class="bg-geay-100 flex justify-center items-center min-h-screen">
+    <!-- todo app -->
+    <div class="bg-white p-4 container rounded shadow-lg">
+      <h1 class="text-3xl font-bold text-gray-800 mb-5 text-center">
+        TODO App
+      </h1>
+      <form id="todoForm" class="flex gap-10 mb-5 justify-center">
+        <input
+          type="text"
+          id="todoInput"
+          class="w-[50vw] p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+          placeholder="Add your todo"
+        />
+        <button
+          type="submit"
+          class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
+        >
+          Add
+        </button>
+      </form>
+      <ul id="todoList" class="space-y-2 grid grid-cols-4 gap-10"></ul>
+    </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const todoForm = document.getElementById("todoForm");
+        const todoInput = document.getElementById("todoInput");
+        const todoList = document.getElementById("todoList");
+
+        todoForm.addEventListener("submit", (e) => {
+          e.preventDefault();
+          const task = todoInput.value.trim();
+          if (task) {
+            const listItem = document.createElement("li");
+            listItem.clasName = "bg-white p-4 container rounded shadow-lg";
+
+            listItem.innerHTML = `
+                        <span class="text-gray-800 font-bold">${task}</span>
+                        <button class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600">Delete</button>
+                    `;
+            listItem.querySelector("button").addEventListener("click", () => {
+              listItem.remove();
+            });
+
+            todoList.appendChild(listItem);
+
+            todoInput.value = "";
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

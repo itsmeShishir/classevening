@@ -48,5 +48,43 @@
         id="next"
       ></i>
     </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const slider = document.querySelector(".slider");
+        const images = document.querySelectorAll(".slider img");
+        const prevButton = document.getElementById("prev");
+        const nextButton = document.getElementById("next");
+        let index = 0;
+
+        const updateSlider = () => {
+          slider.style.transform = `translateX(${-index * 100}%)`;
+          slider.style.transition = "transform 0.5s ease-in-out";
+        };
+        nextButton.addEventListener("click", () => {
+          if (index < images.length - 1) {
+            index++;
+          } else {
+            index = 0;
+          }
+          updateSlider();
+        });
+        prevButton.addEventListener("click", () => {
+          if (index > 0) {
+            index--;
+          } else {
+            index = images.length - 1;
+          }
+          updateSlider();
+        });
+        setInterval(() => {
+          if (index < images.length - 1) {
+            index++;
+          } else {
+            index = 0;
+          }
+          updateSlider();
+        }, 3000);
+      });
+    </script>
   </body>
 </html>

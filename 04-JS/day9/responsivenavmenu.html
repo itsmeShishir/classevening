@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script>
+      tailwind.confg = {
+        darkMode: "class", //enable dark mode
+      };
+    </script>
+  </head>
+  <body class="dark:bg-gray-900 bg-white">
+    <nav
+      class="container md:w-[70vw] mx-auto flex h-[7vh] items-center gap-10 justify-between md:justify-start"
+    >
+      <h1 class="text-3xl text-blue-900 font-extrabold md:w-[13vw]">
+        Digit<span class="text-black">Marketing</span>
+      </h1>
+      <!-- desktop mode  -->
+      <div class="hidden md:flex w-[55vw] justify-between items-center">
+        <div class="flex gap-10">
+          <a href="#" class="text-lg text-red-500 hover:text-black">Home</a>
+          <a href="#" class="text-lg hover:text-red-500">About</a>
+          <a href="#" class="text-lg hover:text-red-500">Services</a>
+          <a href="#" class="text-lg hover:text-red-500">pages</a>
+          <a href="#" class="text-lg hover:text-red-500">Contact</a>
+        </div>
+        <div class="flex gap-10 items-center">
+          <i
+            class="fa-solid fa-magnifying-glass text-lg text-red-500 bg-gray-200 hover:text-gray-200 hover:bg-red-500 py-2 px-3 rounded-full"
+          ></i>
+          <a
+            href="#"
+            class="text-lg text-white bg-blue-900 hover:border-2 hover:border-blue-700 py-2 px-6 rounded"
+            >Purchase</a
+          >
+        </div>
+      </div>
+      <div class="flex gap-5 items-center">
+        <i class="fa-solid fa-moon text-lg text-black"></i>
+        <i
+          id="menu"
+          class="fa-solid fa-bars text-lg text-white text-black md:hidden px-2 py-1 rounded bg-blue-600"
+        ></i>
+      </div>
+    </nav>
+    <!-- mobile -->
+    <div
+      id="mobileMenu"
+      class="bg-blue-100 md:hidden flex flex-col justify-between items-center gap-10"
+    >
+      <div class="flex flex-col gap-10">
+        <a href="#" class="text-lg text-red-500 hover:text-black">Home</a>
+        <a href="#" class="text-lg hover:text-red-500">About</a>
+        <a href="#" class="text-lg hover:text-red-500">Services</a>
+        <a href="#" class="text-lg hover:text-red-500">pages</a>
+        <a href="#" class="text-lg hover:text-red-500">Contact</a>
+      </div>
+      <div class="flex flex-col gap-10 items-center">
+        <i
+          class="fa-solid fa-magnifying-glass text-lg text-red-500 bg-gray-200 hover:text-gray-200 hover:bg-red-500 py-2 px-3 rounded-full"
+        ></i>
+        <a
+          href="#"
+          class="text-lg text-white bg-blue-900 hover:border-2 hover:border-blue-700 py-2 px-6 rounded"
+          >Purchase</a
+        >
+      </div>
+    </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const menu = document.getElementById("menu");
+        const mobileMenu = document.getElementById("mobileMenu");
+
+        menu.addEventListener("click", () => {
+          mobileMenu.classList.toggle("hidden");
+        });
+      });
+    </script>
+  </body>
+</html>
