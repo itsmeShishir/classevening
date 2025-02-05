@@ -1,0 +1,24 @@
+react -> 
+single page application, 
+real dom -> virtual dom, 
+react js -> library -> frontend
+-> framework -> django, laravel -> next js -> full fetch backend or frontend 
+
+requirements -> 1st node, npm, npx 
+-> node -> v8 and c++ -> browser ma garna js code locally run 
+-> npm -> node package manage -> maintain or install package
+-> npx -> node package execution -> execute
+
+cmd -> node -v , npm -v , npx -v
+// real dom vs virtual dom 
+html -> real dom 
+virtual dom -> 
+
+// js vs jsx -> java script vs javascript xml -> html, css
+//  how to create a project in react 
+// old approach and new approach 
+-> old approact -> termianl or cmd -> npx create-react-app projectname
+-> new apprach -> termianl or cmd -> vite -> one of the package manage 
+-> npm create vite@latest
+
+
